@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicicios/" targetNamespace="http://Servicicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Agregar_Usuario" type="tns:Agregar_Usuario" />
+  <xs:element name="Agregar_UsuarioResponse" type="tns:Agregar_UsuarioResponse" />
+  <xs:element name="Agregar_estado" type="tns:Agregar_estado" />
+  <xs:element name="Agregar_estadoResponse" type="tns:Agregar_estadoResponse" />
+  <xs:element name="Login" type="tns:Login" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="Publicar_Estado" type="tns:Publicar_Estado" />
+  <xs:element name="Publicar_EstadoResponse" type="tns:Publicar_EstadoResponse" />
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Agregar_estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agregar_estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Agregar_estadoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Publicar_Estado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Publicar_EstadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Agregar_Usuario">
+    <xs:sequence>
+      <xs:element name="cod" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="nacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="Contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Agregar_UsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

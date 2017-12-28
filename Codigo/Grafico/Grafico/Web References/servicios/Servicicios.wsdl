@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Servicicios" targetNamespace="http://Servicicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/Fase2/Servicicios?xsd=1" namespace="http://Servicicios/" />
+    </xsd:schema>
+  </types>
+  <message name="Publicar_Estado">
+    <part name="parameters" element="tns:Publicar_Estado" />
+  </message>
+  <message name="Publicar_EstadoResponse">
+    <part name="parameters" element="tns:Publicar_EstadoResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="Agregar_Usuario">
+    <part name="parameters" element="tns:Agregar_Usuario" />
+  </message>
+  <message name="Agregar_UsuarioResponse">
+    <part name="parameters" element="tns:Agregar_UsuarioResponse" />
+  </message>
+  <message name="Agregar_estado">
+    <part name="parameters" element="tns:Agregar_estado" />
+  </message>
+  <message name="Agregar_estadoResponse">
+    <part name="parameters" element="tns:Agregar_estadoResponse" />
+  </message>
+  <portType name="Servicicios">
+    <operation name="Publicar_Estado">
+      <input wsam:Action="http://Servicicios/Servicicios/Publicar_EstadoRequest" message="tns:Publicar_Estado" />
+      <output wsam:Action="http://Servicicios/Servicicios/Publicar_EstadoResponse" message="tns:Publicar_EstadoResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://Servicicios/Servicicios/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://Servicicios/Servicicios/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="Agregar_Usuario">
+      <input wsam:Action="http://Servicicios/Servicicios/Agregar_UsuarioRequest" message="tns:Agregar_Usuario" />
+      <output wsam:Action="http://Servicicios/Servicicios/Agregar_UsuarioResponse" message="tns:Agregar_UsuarioResponse" />
+    </operation>
+    <operation name="Agregar_estado">
+      <input wsam:Action="http://Servicicios/Servicicios/Agregar_estadoRequest" message="tns:Agregar_estado" />
+      <output wsam:Action="http://Servicicios/Servicicios/Agregar_estadoResponse" message="tns:Agregar_estadoResponse" />
+    </operation>
+  </portType>
+  <binding name="ServiciciosPortBinding" type="tns:Servicicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Publicar_Estado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Agregar_Usuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Agregar_estado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Servicicios">
+    <port name="ServiciciosPort" binding="tns:ServiciciosPortBinding">
+      <soap:address location="http://localhost:8080/Fase2/Servicicios" />
+    </port>
+  </service>
+</definitions>
